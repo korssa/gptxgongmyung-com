@@ -170,9 +170,7 @@ export function GalleryManager({
         </div>
       )}
     </div>
-                  )}
-                </div>
-
+             
                 {/* 상태 배지 */}
                 <div className="absolute bottom-2 left-2">
                   <Badge className="bg-green-500 text-white text-xs">
