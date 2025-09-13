@@ -150,25 +150,26 @@ export function GalleryManager({
           )
         ) : (
           currentItems.map((item) => (
-            <Card
-              key={item.id}
-              className="group overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              style={{ backgroundColor: "#D1E2EA" }}
-              onMouseEnter={blockTranslationFeedback}
-            >
-              <div className="relative">
-                {/* 이미지 */}
-                <div className="aspect-square overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 relative">
-                  {item.imageUrl ? (
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 w-full h-full flex items-center justify-center text-6xl">
-                      📱
-                    </div>
+      <Card
+  key={item.id}
+  className="w-[400px] aspect-[4/5] flex flex-col group overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+  style={{ backgroundColor: "#D1E2EA" }}
+  onMouseEnter={blockTranslationFeedback}
+>
+  <div className="relative">
+    <div className="aspect-square overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 relative">
+      {item.imageUrl ? (
+        <img
+          src={item.imageUrl}
+          alt={item.title}
+          className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+        />
+      ) : (
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center text-6xl">
+          📱
+        </div>
+      )}
+    </div>
                   )}
                 </div>
 
